@@ -2,7 +2,7 @@
 layout: default
 ---
 
-![Banner](assets/logocolombiacompra.png)
+![Banner](assets/banner_colcontrata.png)
 
 # Col contrata
 
