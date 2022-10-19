@@ -1,0 +1,26 @@
+,SECOP I,TVEC,SECOP II,Unificado,SECOP I DA,SECOP II DA,TVEC DA,Observaciones,API_DA_S_I,API_DA_S_II,API_DA_S_TVEC
+0,Fuente,Fuente,Fuente,Fuente,fuente,fuente,fuente,Se genera para S_II y TVEC,fuente,fuente,fuente
+1,ID_Contrato,ID,ContractReference,ID Contrato,Numero de Contrato,ID Contrato,Identificador de la Orden ,,numero_de_contrato,id_contrato,identificador_de_la_orden
+2,UID,Proceso,RequestReference,ID Proceso,UID,Proceso de Compra,Solicitud ,,uid,proceso_de_compra,solicitud
+3,ID_Entidad,ID_Entidad,Código Entidad,ID entidad Plataforma,Código de la Entidad,Codigo Entidad,ID Entidad ,Código por plataforma,c_digo_de_la_entidad,codigo_entidad,id_entidad
+4,Entidad,Entidad,Nombre Entidad,Entidad,Nombre Entidad,Nombre Entidad,Entidad ,,nombre_entidad,nombre_entidad,entidad
+5,NIT de la Entidad,NIT,NIT Entidad,NIT Entidad,NIT de la Entidad,Nit Entidad,NIT,Hacer cruce con TVEC Entidades [Nombre],nit_de_la_entidad,nit_entidad,
+6,Nivel Entidad,Orden,Orden,Orden,Nivel Entidad,Orden,Nivel,Hacer cruce con TVEC Entidades [Orden],nivel_entidad,orden,
+7,Modalidad,Modalidad,ProcedureProfileLabel,Modalidad,Modalidad de Contratacion,Modalidad de Contratacion,Modalidad,Definir modalidad en TVEC como TVEC,modalidad_de_contratacion,modalidad_de_contratacion,
+8,Estado,Estado,ContractState,Estado,Estado del Proceso,Estado Contrato,Estado ,,estado_del_proceso,estado_contrato,estado
+9,Detalle,Agregacion,Description,Descripción proceso,Detalle del Objeto a Contratar,Descripcion del Proceso,Agregacion ,,detalle_del_objeto_a_contratar,descripcion_del_proceso,agregacion
+10,Objeto a Contratar,Items,Objeto Contrato,Objeto Contrato,Objeto a Contratar,Objeto del Contrato,Items ,,objeto_a_contratar,objeto_del_contrato,items
+11,Tipo_Contrato,Tipo,TypeContract,Tipo de contrato,Tipo De Contrato,Tipo de Contrato,Tipo,Definir tipo TVEC como TVEC,tipo_de_contrato,tipo_de_contrato,
+12,Fecha_firma,Fecha,AprovalDate,Fecha de Firma,Fecha de Firma del Contrato,Fecha de Firma,Fecha,,fecha_de_firma_del_contrato,fecha_de_firma,fecha
+13,UNSPSC_Clase,UNSPSC,DimMainCategoryCode,UNSPSC,ID Clase,Codigo de Categoria Principal,UNSPSC,Arreglas código en SECOP II,id_clase,codigo_de_categoria_principal,
+14,Prov_nombre,Proveedor,Nombre Proveedor,Nombre Proveedor,Nom Razon Social Contratista,Proveedor Adjudicado,Proveedor,,nom_razon_social_contratista,proveedor_adjudicado,proveedor
+15,Prov_documento,Documento Proveedor,Documento Proveedor,Documento Proveedor,Identificacion del Contratista,Documento Proveedor,NIT Proveedor ,Hacer cruce con TVEC Proveedores [Documento],identificacion_del_contratista,documento_proveedor,nit_proveedor
+16,Tipo Identifi del Contratista,Tipo Documento Proveedor,TipoDocProveedor,Tipo de documento proveedor,Tipo Identifi del Contratista,TipoDocProveedor,Tipo Documento Proveedor,Hacer cruce con NIT,tipo_identifi_del_contratista,tipodocproveedor,
+17,Cuantia Contrato,Total,ContractValue,Valor del contrato,Cuantia Contrato,Valor del Contrato,Total,,cuantia_contrato,valor_del_contrato,total
+18,Departamento Entidad,Departamento Entidad,Departamento Entidad,Departamento Entidad,Departamento Entidad,Departamento,Departamento Entidad,Hacer cruce con TVEC Entidades [Departamento],departamento_entidad,departamento,
+19,Municipio Entidad,Ciudad Entidad,Ciudad Entidad,Ciudad Entidad,Municipio Entidad,Ciudad,Ciudad Entidad,Hacer cruce con TVEC Entidades [Ciudad],municipio_entidad,ciudad,ciudad
+20,Dpto y Muni Contratista,Departamento Proveedor,Departamento Proveedor,Departamento Proveedor,Dpto y Muni Contratista,Departamento Proveedor,Departamento Proveedor,Hacer cruce con TVEC Proveedores [Departamento],dpto_y_muni_contratista,,
+21,Dpto y Muni Contratista,Ciudad Proveedor,Ciudad Proveedor,Ciudad Proveedor,Muni Contratista,Ciudad Proveedor,Ciudad Proveedor,Hacer cruce con TVEC Proveedores [Ciudad],,,
+22,Fecha Ini Ejec Contrato,Fecha_ini,ContractStartDate,Inicio de contrato,Fecha Ini Ejec Contrato,Fecha de Inicio del Contrato,Fecha_inicio,,fecha_ini_ejec_contrato,fecha_de_inicio_del_contrato,
+23,Fecha Fin Ejec Contrato,Fecha_vence,ContractEndDate,Fin de contrato,Fecha Fin Ejec Contrato,Fecha de Fin del Contrato,Fecha_vence,,fecha_fin_ejec_contrato,fecha_de_fin_del_contrato,
+24,Link,TVEC,URLProceso,URL,Ruta Proceso en SECOP I,URLProceso,URL,Definir tipo TVEC como TVEC,ruta_proceso_en_secop_i,urlproceso,
