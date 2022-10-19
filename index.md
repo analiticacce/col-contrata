@@ -2,7 +2,7 @@
 layout: default
 ---
 
-![Banner](assets/banner_colcontrata.png)
+![Banner](assets/bannercolcontrata.png)
 
 # Col contrata
 
