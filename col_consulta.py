@@ -72,13 +72,14 @@ def consulta_datos_departamento(departamento,año):
 
 def consulta_mae(departamento,entidad,fecha_firma_inicio,fecha_firma_fin,valor_min,valor_max,cod_unspsc):
     results_detalle=[]
-    if cod_unspsc==None:
-        aditional_string=""
-    else:
-        aditional_string=" and {0} like '%{1}%'".format(identificador_columnas[valor_columnas[i]]['UNSPSC'],cod_unspsc) 
+    
     for i in ['SECOP I','SECOP II']:
         queries_list=[]
         results_detalle_dpto=[]
+        if cod_unspsc==0:
+            aditional_string=""
+        else:
+            aditional_string=" and {0} like '%{1}%'".format(identificador_columnas[valor_columnas[i]]['UNSPSC'],cod_unspsc) 
         for j in dptos[departamento]:
 
             query_secop_tot=""" Select
@@ -103,7 +104,7 @@ def consulta_mae(departamento,entidad,fecha_firma_inicio,fecha_firma_fin,valor_m
 
             where
                 ({4}='{18}') and
-                ({3}='{19}') and
+                ({3} = '{19}') and
                 ({16} between '{20}' and '{21}') and
                 ({2} between {22} and {23})  
                 {24}
@@ -119,9 +120,11 @@ def consulta_mae(departamento,entidad,fecha_firma_inicio,fecha_firma_fin,valor_m
             identificador_columnas[valor_columnas[i]]['Documento Proveedor'],identificador_columnas[valor_columnas[i]]['Inicio de contrato'],
             identificador_columnas[valor_columnas[i]]['Fin de contrato'],identificador_columnas[valor_columnas[i]]['Fecha de Firma'],
             identificador_columnas[valor_columnas[i]]['URL'],j,entidad,fecha_firma_inicio,fecha_firma_fin,valor_min,valor_max,aditional_string)
+            #print(query_secop_tot)
             queries_list.append(query_secop_tot)
             df_temp=pd.DataFrame(cliente.get(identificador_datos[i], query=query_secop_tot))
             df_temp['fuente']=i
+            #print(df_temp.shape)
             if df_temp.shape[0]>0:
                 results_detalle_dpto.append(df_temp)
         if len(results_detalle_dpto)>0:
@@ -132,5 +135,7 @@ def consulta_mae(departamento,entidad,fecha_firma_inicio,fecha_firma_fin,valor_m
     results_detalle['valor_contrato']=results_detalle['valor_contrato'].astype(float)
     results_detalle['departamento_entidad']=results_detalle['departamento_entidad'].replace('Distrito Capital de Bogotá','Bogotá DC')\
     .replace('San Andrés Providencia y Santa Catalina','San Andrés, Providencia y Santa Catalina').replace('Norte De Santander','Norte de Santander')
+
+    results_detalle['url']=[url['url'] for url in results_detalle['url'] ]
       
     return results_detalle
