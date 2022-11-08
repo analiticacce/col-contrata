@@ -18,6 +18,7 @@ from dash.dependencies import Input, Output
 import dash_bootstrap_components as dbc
 from dash import dash_table
 from datetime import date
+from IPython.core.display import HTML,display
 
 def consulta_departamento(departamento):
     results_detalle=[]
@@ -500,3 +501,13 @@ def consulta_MAE(port=np.random.randint(1000,9999)):
 
 
     return app.run_server(mode='inline',debug=True,port=port)
+
+
+def consulta_MAE_powerbi():
+    display(
+        HTML(
+            """
+            <iframe title="Analisis_de_demanda - V2.2-datos_completos" width="1200" height="900" src="https://app.powerbi.com/view?r=eyJrIjoiMGY4MWZmZmUtNGJlYy00YTBlLTgzYmYtZGE2NGRkZDA1YTJlIiwidCI6IjdiMDkwNDFlLTI0NTEtNDlkMC04Y2IxLTc5ZDVlM2Q4YzFiZSIsImMiOjR9&pageName=ReportSection17ad17361e56dd6a009c" frameborder="0" allowFullScreen="true"></iframe>
+            """
+            )
+    )
